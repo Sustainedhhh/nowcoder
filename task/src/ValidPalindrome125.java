@@ -24,53 +24,55 @@ public class ValidPalindrome125 {
 
     }
 
-//    public static boolean isPalindrome(String s) {
-//        if(s == ""){
-//            return true;
-//        }
-//        else{
-//            int low = 0;
-//            int high = s.length()-1;
-//            char lowChar,highChar;
-//            while(low < high){
-//                lowChar = s.charAt(low);
-//                highChar = s.charAt(high);
-//                while(low<high && !Character.isAlphabetic((int)lowChar)){
-//                    low++;
-//                    if(low<high){
-//                        lowChar = s.charAt(low);
-//                    }
-//                }
-//                while(low<high && !Character.isAlphabetic((int)highChar)){
-//                    high--;
-//                    if(low<high){
-//                        highChar = s.charAt(high);
-//                    }
-//                }
-//                if(low<high) {
-//                    if (String.valueOf(lowChar).toUpperCase().equals(String.valueOf(highChar).toUpperCase())) {
-//                        low++;
-//                        high--;
-//                    } else {
-//                        return false;
-//                    }
-//                }
-//            }
-//            return true;
-//        }
-//    }
     public static boolean isPalindrome(String s) {
-        if (s == null || s.length() == 0) return true;
-        int i = 0, j = s.length() - 1;
-        s = s.toLowerCase();
-        while (i < j) {
-            final char ic = s.charAt(i);
-            final char jc = s.charAt(j);
-            if (!Character.isLetterOrDigit(ic)) { i++; continue; }
-            if (!Character.isLetterOrDigit(jc)) { j--; continue; }
-            if (ic != jc) return false;
-            i++; j--;
+        if(s.equals("")){
+            return true;
         }
-        return true;
+        else{
+            s = s.toUpperCase();
+            int low = 0, high = s.length()-1;
+            char lowChar,highChar;
+            while(low < high){
+                lowChar = s.charAt(low);
+                highChar = s.charAt(high);
+                while(low<high && !Character.isLetterOrDigit(lowChar)){
+                    low++;
+                    if(low<high){
+                        lowChar = s.charAt(low);
+                    }
+                }
+                while(low<high && !Character.isLetterOrDigit(highChar)){
+                    high--;
+                    if(low<high){
+                        highChar = s.charAt(high);
+                    }
+                }
+                if(low<high) {
+                    if (lowChar == highChar ) {
+                        low++;
+                        high--;
+                    } else {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
     }
+
+    //leetcode 别人的方法
+//    public static boolean isPalindrome(String s) {
+//        if (s == null || s.length() == 0) return true;
+//        int i = 0, j = s.length() - 1;
+//        s = s.toLowerCase();
+//        while (i < j) {
+//            final char ic = s.charAt(i);
+//            final char jc = s.charAt(j);
+//            if (!Character.isLetterOrDigit(ic)) { i++; continue; }
+//            if (!Character.isLetterOrDigit(jc)) { j--; continue; }
+//            if (ic != jc) return false;
+//            i++; j--;
+//        }
+//        return true;
+//    }
 }
