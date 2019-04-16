@@ -8,10 +8,10 @@ public class mydemo extends Thread{
 
 
     public static void main(String[] args) throws Exception{
-
-//        System.out.println(TestCls.sInt);
-//        System.out.println(TestCls.sfInt);
-        TestCls tes = new  TestCls();
+            LinkedList<Integer> q = new LinkedList();
+            ArrayList<Integer> res = new ArrayList();
+            HashMap<Integer,Integer> map = new HashMap<>();
+            map.put();
 
     }
 
