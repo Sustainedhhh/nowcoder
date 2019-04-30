@@ -1,5 +1,11 @@
-import myUtil.*;
+import myutil.*;
 
+/**
+ * DESCRIPTION
+ * leetcode题目
+ *  fixme 没看题目 感觉有一些问题； 回头补上
+ * @author: zwl
+ */
 public class PartitionList86 {
 
     public static void main(String[] args) {
@@ -20,7 +26,7 @@ public class PartitionList86 {
         while(null != dummyHead.next && dummyHead.next.val < x ){
             dummyHead = dummyHead.next;
         }
-        ListNode pre =dummyHead;
+        ListNode pre = dummyHead;
         ListNode cur = dummyHead.next;
         while(cur != null){
             if(cur.val < x ){

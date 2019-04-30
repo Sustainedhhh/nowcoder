@@ -1,5 +1,10 @@
-import myUtil.*;
+import myutil.*;
 
+/**
+ * DESCRIPTION
+ * 反转链表
+ * @author: zwl
+ */
 public class ReverseLinkedList206 {
 
 

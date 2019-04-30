@@ -1,4 +1,4 @@
-import myUtil.*;
+import myutil.*;
 
 
 public class AddTwoNumbersII445 {
@@ -18,7 +18,7 @@ public class AddTwoNumbersII445 {
 
     }
     //采用迭代的方案解决问题
-    //两部分： 反转链表 、安装反序的存法来进行加法（反转链表相当于预处理！！）
+    //两部分： 反转链表 、按照反序的存法来进行加法（反转链表相当于预处理！！）
 //    public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 //        l1 = reverse(l1);
 //        l2 = reverse(l2);
@@ -84,7 +84,7 @@ public class AddTwoNumbersII445 {
         ListNode p = l1;
         ListNode q = l2;
 
-        while(null != p){
+        while (null != p) {
             lengthl1++;
             p = p.next;
         }

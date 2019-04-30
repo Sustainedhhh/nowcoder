@@ -1,7 +1,14 @@
+/**
+ * DESCRIPTION
+ * leetcode 215题目
+ * 数组中第K大的值
+ *
+ * @author: zwl
+ */
 public class KthLargestElement215 {
 
     public static void main(String[] args) {
-//        int[] nums = myUtil.generateRandomArray(8);
+//        int[] nums = myutil.generateRandomArray(8);
         int[] nums = {3,2,1,5,6,4};
         myUtil.printArray(nums);
 
@@ -17,7 +24,15 @@ public class KthLargestElement215 {
         return nums[k-1];
 
     }
-    //solution 1
+
+    /**
+     * 这里写的其实就是快排的两种实现方式
+     * Solution 1:
+     * @param nums
+     * @param start
+     * @param end
+     * @param k
+     */
     public static void quickSort(int[] nums,int start ,int end,int k){
 
         if(null != nums && nums.length !=0){
@@ -53,8 +68,13 @@ public class KthLargestElement215 {
         nums[des] = temp;
     }
 
-    //solution 2
-
+    /**
+     * Sloution 2
+     * @param nums
+     * @param start
+     * @param end
+     * @param k
+     */
     public static void quickSort2(int[] nums,int start,int end,int k){
         if(null != nums && nums.length !=0){
             int left =start,right = end;
