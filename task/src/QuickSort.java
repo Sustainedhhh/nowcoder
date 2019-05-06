@@ -1,8 +1,9 @@
-public class quickSort {
+import myutil.*;
+public class QuickSort {
     public static void main(String[] args) {
-        int[] nums = myUtil.generateRandomArray(100);
+        int[] nums = ArraysUtil.generateRandomArray(100);
         quickSort(nums,0,nums.length-1);
-        myUtil.printArray(nums);
+        ArraysUtil.printArray(nums);
     }
 
 
@@ -15,7 +16,7 @@ public class quickSort {
 //    public static void quickSort(int[] nums,int start,int end){
 //        if (null == nums || start > end) {
 //            throw new IllegalArgumentException("invalid parameters");
-//        }else {
+//        }else {Q
 //            if (start != end) {
 //                int base = nums[start];
 //                int left = start, right = end;

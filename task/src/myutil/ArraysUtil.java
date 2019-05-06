@@ -1,6 +1,8 @@
+package myutil;
+
 import java.util.Random;
 
-public class myUtil {
+public class ArraysUtil {
     public static int[] generateOrderArray(int len,int order){
         int[] result = new int[len];
         //order =1 升序 order =0 降序

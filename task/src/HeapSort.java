@@ -1,3 +1,5 @@
+import myutil.ArraysUtil;
+
 import java.util.List;
 
 /**
@@ -9,12 +11,12 @@ public class HeapSort {
 
 
     public static void main(String[] args) {
-        int[] nums = myUtil.generateRandomArray(20);
-        myUtil.printArray(nums);
+        int[] nums = ArraysUtil.generateRandomArray(20);
+        ArraysUtil.printArray(nums);
         selectionSort(nums);
-        myUtil.printArray(nums);
+        ArraysUtil.printArray(nums);
         heapSort(nums);
-        myUtil.printArray(nums);
+        ArraysUtil.printArray(nums);
     }
 
 

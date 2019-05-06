@@ -1,3 +1,5 @@
+import myutil.ArraysUtil;
+
 /**
  * DESCRIPTION
  * leetcode 215题目
@@ -10,17 +12,17 @@ public class KthLargestElement215 {
     public static void main(String[] args) {
 //        int[] nums = myutil.generateRandomArray(8);
         int[] nums = {3,2,1,5,6,4};
-        myUtil.printArray(nums);
+        ArraysUtil.printArray(nums);
 
         quickSort2(nums,0,nums.length-1,2);
-        myUtil.printArray(nums);
+        ArraysUtil.printArray(nums);
     }
 
 
     public int findKthLargest(int[] nums, int k) {
 
         quickSort(nums,0,nums.length-1,k);
-        myUtil.printArray(nums);
+        ArraysUtil.printArray(nums);
         return nums[k-1];
 
     }

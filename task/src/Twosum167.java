@@ -1,6 +1,6 @@
-public class twosum167 {
+import myutil.*;
 
-
+public class Twosum167 {
 
 /*
     Input: numbers = [2,7,11,15], target = 9
@@ -11,10 +11,8 @@ public class twosum167 {
     public static void main(String[] args) {
         int[] numbers = {2,7,11,15};
         int target = 9;
-        myUtil.printArray(twoSum(numbers,target));
+        ArraysUtil.printArray(twoSum(numbers,target));
     }
-
-
 
 
     public static int[] twoSum(int[] numbers, int target) {

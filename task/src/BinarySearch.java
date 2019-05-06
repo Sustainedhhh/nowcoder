@@ -1,8 +1,9 @@
+import myutil.*;
 public class BinarySearch {
     public static void main(String[] args) {
 
         int len = 100000;
-        int[] arr = myUtil.generateOrderArray(len,1);
+        int[] arr = ArraysUtil.generateOrderArray(len,1);
         for(int i : arr){
             System.out.println(i);
         }

@@ -1,17 +1,15 @@
+import myutil.BinaryTreeUtil;
+import myutil.TreeNode;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args){
-//        Scanner in = new Scanner(System.in);
-//        int num = in.nextInt();
-//        while(in.hasNext()){
-//            String str = in.next();
-//            modify(str);
-//
-//        }
 
-//        System.out.println(modify("wooooowhellloAABBCCDDEE"));
+        Integer[] nums = {3,9,20,null,null,15,7};
+        TreeNode root = BinaryTreeUtil.createBinaryTree(nums);
+        BinaryTreeUtil.printLevelTraversal(root);
 
 
     }

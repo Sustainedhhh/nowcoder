@@ -1,6 +1,6 @@
 public class pow {
     public static void main(String[] args) {
-        System.out.println(pow(2,4));
+        System.out.println(Pow(2,4));
     }
 
     /**
@@ -9,7 +9,7 @@ public class pow {
      * @param n 指数
      * @return 结果
      */
-    public static int pow(int m, int n){
+    public static int Pow(int m, int n){
 
         int res = 1;
         int power = m;
