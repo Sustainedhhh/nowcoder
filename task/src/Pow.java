@@ -1,4 +1,4 @@
-public class pow {
+public class Pow {
     public static void main(String[] args) {
         System.out.println(Pow(2,4));
     }

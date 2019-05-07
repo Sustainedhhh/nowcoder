@@ -5,7 +5,7 @@ import java.text.DecimalFormat;
  *  开平方的两种实现方式
  * @author: zwl
  */
-public class Sqr {
+public class Sqrt {
 
     public static void main(String[] args) {
 //        int[] nums = myutil.generateRandomArray(30);
