@@ -2,7 +2,7 @@ import myutil.*;
 
 /**
  * DESCRIPTION
- * leetcode题目
+ * leetcode 86
  *  fixme 没看题目 感觉有一些问题； 回头补上
  * @author: zwl
  */

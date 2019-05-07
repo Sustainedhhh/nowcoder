@@ -1,6 +1,9 @@
+/**
+ * DESCRIPTION
+ * leetcode 125 (做了好久的题.题目没读清楚，大锅)
+ * @author: zwl
+ */
 public class ValidPalindrome125 {
-
-
 
     /*
     Example 1:
@@ -17,62 +20,27 @@ public class ValidPalindrome125 {
         System.out.println(isPalindrome("race a car"));
         System.out.println(isPalindrome("0p"));
 
-//        System.out.println(String.valueOf('a').toUpperCase());
-//        System.out.println(String.valueOf('A').toUpperCase());
-//        System.out.println(String.valueOf('A').toUpperCase().equals(String.valueOf('a').toUpperCase()));
-
-
     }
 
+    /**
+     * leetcode 别人的方法
+     * @param s
+     * @return
+     */
     public static boolean isPalindrome(String s) {
-        if(s.equals("")){
+        if (s == null || s.length() == 0) {
             return true;
         }
-        else{
-            s = s.toUpperCase();
-            int low = 0, high = s.length()-1;
-            char lowChar,highChar;
-            while(low < high){
-                lowChar = s.charAt(low);
-                highChar = s.charAt(high);
-                while(low<high && !Character.isLetterOrDigit(lowChar)){
-                    low++;
-                    if(low<high){
-                        lowChar = s.charAt(low);
-                    }
-                }
-                while(low<high && !Character.isLetterOrDigit(highChar)){
-                    high--;
-                    if(low<high){
-                        highChar = s.charAt(high);
-                    }
-                }
-                if(low<high) {
-                    if (lowChar == highChar ) {
-                        low++;
-                        high--;
-                    } else {
-                        return false;
-                    }
-                }
-            }
-            return true;
+        int i = 0, j = s.length() - 1;
+        s = s.toLowerCase();
+        while (i < j) {
+            final char ic = s.charAt(i);
+            final char jc = s.charAt(j);
+            if (!Character.isLetterOrDigit(ic)) { i++; continue; }
+            if (!Character.isLetterOrDigit(jc)) { j--; continue; }
+            if (ic != jc) return false;
+            i++; j--;
         }
+        return true;
     }
-
-    //leetcode 别人的方法
-//    public static boolean isPalindrome(String s) {
-//        if (s == null || s.length() == 0) return true;
-//        int i = 0, j = s.length() - 1;
-//        s = s.toLowerCase();
-//        while (i < j) {
-//            final char ic = s.charAt(i);
-//            final char jc = s.charAt(j);
-//            if (!Character.isLetterOrDigit(ic)) { i++; continue; }
-//            if (!Character.isLetterOrDigit(jc)) { j--; continue; }
-//            if (ic != jc) return false;
-//            i++; j--;
-//        }
-//        return true;
-//    }
 }

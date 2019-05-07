@@ -1,5 +1,10 @@
 import myutil.*;
 
+/**
+ * DESCRIPTION
+ * leetcode
+ * @author: zwl
+ */
 public class Twosum167 {
 
 /*
@@ -14,19 +19,24 @@ public class Twosum167 {
         ArraysUtil.printArray(twoSum(numbers,target));
     }
 
-
+    /**
+     *  对撞指针的使用
+     * @param numbers
+     * @param target
+     * @return
+     */
     public static int[] twoSum(int[] numbers, int target) {
         int low = 0;
-        int high = numbers.length-1;
-        while(low<high){
-            if(low<high && numbers[low]+numbers[high] ==target){
-                int[] res = {low+1,high+1};
+        int high = numbers.length - 1;
+        while (low < high) {
+            if (low < high && numbers[low] + numbers[high] == target) {
+                int[] res = {low + 1, high + 1};
                 return res;
             }
-            if(low < high && numbers[low]+numbers[high] < target){
+            if(low < high && numbers[low] + numbers[high] < target){
                 low++;
             }
-            if(low < high && numbers[low]+numbers[high]>target){
+            if(low < high && numbers[low] + numbers[high] > target){
                 high--;
             }
         }
