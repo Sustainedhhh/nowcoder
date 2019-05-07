@@ -1,5 +1,11 @@
 import java.util.*;
-public class daishuguohe{
+
+/**
+ * DESCRIPTION
+ *  不知道这是在哪遇见的题？ 应该是动态规划
+ * @author: zwl
+ */
+public class DaiShuGuoHe{
     public static void main(String[] args) {
         Scanner in = new Scanner("5\n2 0 1 1 1");
         int len = in.nextInt();

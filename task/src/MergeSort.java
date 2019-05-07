@@ -1,3 +1,8 @@
+/**
+ * DESCRIPTION
+ *  归并排序
+ * @author:zwl
+ */
 public class MergeSort {
 
     public static void main(String[] args) {
@@ -8,7 +13,7 @@ public class MergeSort {
     }
 
     /**
-     * 合并排序
+     * 归并排序
      * @param nums 待排数组
      */
     public static void mergeSort(int[] nums) {
